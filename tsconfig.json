@@ -1,0 +1,36 @@
+{
+  // 编译选项：
+  "compilerOptions": {
+    // 目标代码--> es5/6/7 这里我们用的是bable来转化的
+    "target": "esnext",
+    // 目标代码需要的模块化方案
+    "module": "esnext",
+    // 严格模式：严格一些的检查
+    "strict": true,
+    // 对jsx做哪种处理 这里用到bable bable会帮我们处理
+    "jsx": "preserve",
+    // 按照node的方式去解析模块
+    "moduleResolution": "node",
+    // 跳过库的类型检测
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": ["webpack-env"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}
